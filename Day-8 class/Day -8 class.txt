@@ -1,0 +1,543 @@
+Day -8 class(30.10.26)
+
+Delete Methods in the list
+--------------------------------
+
+
+8)Pop():removes an element using its index or without index remove end of the list and returns the removed value.(index)
+
+syntax: list.pop(index)
+
+index is optional part.
+
+ex: remove product item from cart.
+
+list = ['bag', 'belts', 'handbags']
+
+list.pop()
+'handbags'
+
+list
+['bag', 'belts']
+
+list.pop(1)
+'belts'
+
+list
+['bag']
+
+
+2)Remove: deletes the first matching value from a list(value)
+
+syntax: list.remove(value)
+
+ex: Removing a particular product by its name from a shopping cart.
+
+list = ['bag', 'belts', 'handbags']
+list.remove('bag')
+list
+['belts', 'handbags']
+
+3)delete(del()):del is a Python statement, not a method.
+
+It can delete:
+- An element using its index.
+- A range of elements using slicing.
+- An entire list variable.
+
+Syntax: 
+
+del list[index]
+del list[start:end]
+del list
+
+
+ex: Removing selected elements or deleting a temporary variable that is no longer needed.
+
+list = ['bag', 'belts', 'handbags']
+del list[1]
+list
+['bag', 'handbags']
+del list[0:0:1]
+list
+['bag', 'handbags']
+del list[0:1:1]
+list
+['handbags']
+del list
+list
+<class 'list'>
+
+
+4)clear():
+clear() removes all elements from a list
+
+Syntax: list.clear()
+
+ex: Clearing all products from a shopping cart when the customer clicks the "Clear Cart" option.
+
+list = ['bag', 'belts', 'handbags']
+list.clear()
+list
+[]
+
+
+//_____________(sorted, shallow copy)_____________
+
+5)sort():method arranges list elements in ascending or descending order
+
+syntax: list.sort()
+	list.sort(reverse=False)
+
+reverse=False: Ascending order (default).
+reverse=True: Descending order.
+
+
+ex: customers can sort products by price from low to high or high to low.
+
+
+
+6)Reverse():it is reverse the element in the list. not sort.
+
+syntax: list.reverse()
+
+ex: Displaying recently added products in reverse order, assuming the list is already ordered from oldest to newest.
+
+
+
+
+
+
+
+
+7)copy(): To create a shallow copy of an existing list. and 
+shallow copy is adding list1 element to list2 and if add an elements list2 that is not reflect to list1(Does not change).
+
+Syntax: new_list = original_list.copy()
+
+ex: Creating a backup of a product list before sorting or modifying it.
+
+//Shallow copy.
+
+Ori_list = ["Shirt", "Shoes", "Bag"]
+Ori_list
+['Shirt', 'Shoes', 'Bag']
+dup_list = Ori_list.copy()
+dup_list
+['Shirt', 'Shoes', 'Bag']
+id(dup_list)
+2297393976832
+id(Ori_list)
+2297393839808
+dup_list.sort()
+dup_list
+['Bag', 'Shirt', 'Shoes']
+Ori_list
+['Shirt', 'Shoes', 'Bag']
+
+
+//deep copy.
+
+Ori_list = ["Shirt", "Shoes", "Bag"]
+Ori_list
+['Shirt', 'Shoes', 'Bag']
+dup_list = Ori_list
+dup_list
+['Shirt', 'Shoes', 'Bag']
+id(Ori_list)
+2297393825152
+id(dup_list)
+2297393825152
+dup_list.sort()
+dup_list
+['Bag', 'Shirt', 'Shoes']
+Ori_list
+['Bag', 'Shirt', 'Shoes']
+
+
+
+
+
+//_______search method__________________________
+
+
+1)count:to count how many times a particular value appears in a list or string.
+
+Syntax: list.count(value)
+
+ex:you can count how many times a particular product appears in an order list.
+
+
+products = ["Mobile", "Laptop", "Mobile", "Mouse", "Mobile"]
+
+Products.count('mobile')
+
+3
+
+
+
+2)index:to find the position (index number) of an element in a list.
+
+Syntax: list.index(value)
+
+ex: When a customer searches for a product in a list, you can use index() to find its position.
+
+products = ["Laptop", "Mobile", "Keyboard", "Mouse"]
+
+products.index("Mobile")
+
+1
+
+
+//______________(Boolean method)_______________
+
+
+8)any:The any() function checks whether at least one element in an iterable is True.
+- If at least one element is True, it returns True.
+- If every element is False, it returns False.
+
+Syntax: any(iterable)
+
+
+ex: At least one product has a price greater than zero, so any() returns True
+
+
+9)all:
+The all() function checks whether all elements in an iterable are True.
+- If every element is True, it returns True.
+- If at least one element is False, it returns False.
+
+Syntax: all(iterable)
+
+
+ex:Every product price is greater than zero, so all() returns True.
+
+
+
+
+#################################################################################
+
+___________________________________________________________________________________
+Tuple: it is collection element enclosed with parathesis.
+	-> it is immutable
+	->orderd
+	->allows duplicate
+	->hetergous
+	->fix: what the start and end of same size.
+-----------------------------------------------------------------------------------
+tuple =(1,)
+it is tuple when we give like this and not a tuple(tuple =1, it is interger)
+
+t=1,2,3,4,5// it is tuple
+t
+(1, 2, 3, 4, 5)
+
+t=(1,21,2,3,1,1) // it is allowing duplicate value.
+t
+(1, 21, 2, 3, 1, 1)
+
+
+t=(1,1.0,'jkkhk', [1,2,3],{1,23,1}, (1,2),{1:1}, True)// hetergerous.
+t
+(1, 1.0, 'jkkhk', [1, 2, 3], {1, 23}, (1, 2), {1: 1}, True)
+
+
+__________
+Note: we can modify the inside the mutable element.
+----------
+
+
+
+
+packing & unpacking:
+a,b,c =(1,2,3)
+a
+1
+b
+2
+c
+3
+
+#_____________________#____________________________-
+
+
+
+
+Properties of Tuple: 
+
+
+
+1)concentation: 
+
+a = (1,2,3)
+b = (1,1,1)
+
+a+b
+
+(1,2,3,1,1,1)
+
+
+2)repeation(*)
+
+a * 2
+(1,2,3,1,2,3)
+
+
+3)slicing(start, end+1, step)
+
+a[:2]
+
+(1,2)
+
+4)indexing([index]):
+
+a[0]
+
+1
+
+
+5)mempership (in, not in)
+
+
+1 in a
+
+True
+
+
+0 in a
+False
+
+
+
+
+//Return methods:
+
+
+
+1)len()
+a = (1,2,3,4,5)
+len(a)
+5
+
+2)sorted():
+
+a = (1,3,1,25,672,9)
+sorted(a)
+[1, 1, 3, 9, 25, 672]
+
+3)min():
+
+a = (1,3,1,25,672,9)
+max(a)
+672
+
+3)max():
+min(a)
+1
+
+
+4)count(counting number):
+
+
+
+5)index(index number):
+
+
+6)any(tuple):
+
+
+7)all(tuple)
+
+
+
+
+//___#####################################################################################
+
+_________________________________________________________________________________________
+set: it is collection of element enclosed with flower brackets.collection of unique elements. It does not allow duplicate values, and it is unordered
+---------------------------------------------------------------------------------
+
+//declaration:
+s = set()
+s = {1,2,3,4,8}
+s
+{2,1,4,8,3}
+
+->it is unorder set.
+s = {1,2,3,4,8}
+s
+{2,1,4,8,3}
+
+
+->it is mutable 
+
+->it is hetergerous only unmutable element and not mutable element.
+set = {123,2.3,'hello',True}
+set
+{True, 2.3, 123, 'hello'}
+set.add([1,2,3])
+Traceback (most recent call last):
+  File "<pyshell#66>", line 1, in <module>
+    set.add([1,2,3])
+TypeError: unhashable type: 'list'
+set.add({1,2,3})
+Traceback (most recent call last):
+  File "<pyshell#67>", line 1, in <module>
+    set.add({1,2,3})
+TypeError: unhashable type: 'set'
+set.add({1:2})
+Traceback (most recent call last):
+  File "<pyshell#68>", line 1, in <module>
+    set.add({1:2})
+TypeError: unhashable type: 'dict'
+
+
+->it is dynamic size.
+-----------------------------------------------------------------------------------------
+
+Operation: Not allowed any operation because it is unordered except membership operation and other operation.
+
+
+1)membership operation:
+
+a = {1,2,4,52,2,1}
+1 in a
+True
+25 not in a
+True
+
+2)union(|):Union combines all elements from two sets.
+Duplicate values are included only once.
+It combines elements from both sets.
+
+syntax: set1 | set2
+
+ex: Combine products from two categories.
+
+a ={1,2,3,4,5}
+
+b= {1,2,3,4,5,6,7}
+
+a|b
+
+{1, 2, 3, 4, 5, 6, 7}
+
+
+
+
+3)intersection(&):Intersection returns only the common elements found in both sets.
+
+syntax: set1 & set2
+
+ex: Find products that are available in both the online and offline stores.
+
+a ={1,2,3,4,5}
+
+b= {1,2,3,4,5,6,7}
+
+a&b
+
+{1,2,3,4,5}
+
+
+
+
+4)symmetry difference(^):It is return not common element both the sets. which mean difference b/w two sets.
+
+Syntax: set1 ^ set2
+
+ex: Find products available in only one of two stores.
+
+a ={1,2,3,4,5}
+
+b= {1,2,3,4,5,6,7}
+
+a^b
+
+{6,7}
+
+
+
+5)difference(-):Difference returns elements that exist in the first set but not in the second set.
+
+syntax: set1 - set2---> set1
+	set2 - set1--->set2
+
+ex: Find products available in the online store but not in the offline store.
+
+a ={1,2,3,4,5}
+
+b= {1,2,3,4,5,6,7}
+
+a-b
+set()
+b-a
+{6, 7}
+
+
+
+
+6)disjoint():The isdisjoint() method checks whether two sets have no common elements.
+- Returns True if there are no common elements.
+- Returns False if at least one common element exists.
+
+
+syntax: set1.isdisjoint(set2)
+
+ex:Check whether two product categories have any products in common.
+
+a ={1,2,3,4,5}
+
+b= {1,2,3,4,5,6,7}
+
+a.isdisjoint(b)
+False
+b.isdisjoint(a)
+False
+
+
+
+
+7)subset():A subset means all elements of one set must exist in another set.
+
+Syntax: set1.issubset(set2)
+
+Check whether all products in a customer's selected order are part of the store's available products.
+
+a ={1,2,3,4,5}
+
+b= {1,2,3,4,5,6,7}
+
+
+a.issubset(b)
+
+True
+
+b.issubset(a)
+
+False
+
+
+
+
+8)superset():A superset means one set contains all the elements of another set.
+
+Syntax: set1.issuperset(set2)
+
+ex: Check whether the store's inventory contains every product requested by a customer.
+
+
+a ={1,2,3,4,5}
+
+b= {1,2,3,4,5,6,7}
+
+
+a.issuperset(b)
+
+False
+
+b.issuperset(a)
+
+True
+
+
