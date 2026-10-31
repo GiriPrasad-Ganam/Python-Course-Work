@@ -1,0 +1,392 @@
+Day -7 Class(29.10.26)
+--------------------------------
+
+
+Identifier Methods: To check the content of a string and return either true or false. 
+
+
+1)startswith:Checks whether a string starts with a particular character or substring.
+
+Syntax: s.startswith(prefix, start, end)
+
+prefix: Character or substring to check.
+
+start and end: Optional positions to check within the string.
+
+
+
+s = "Master jack chan"
+s
+'Master jack chan'
+
+
+s.startswith('a')
+False
+s.startswith('M')
+True
+s.startswith('Master')
+True
+
+ex: Checking whether a product code starts with a particular category prefix(character/substring)
+
+
+2)endswith:To check whether a string ends with a particular character or substring.
+
+Syntax: string.endswith(suffix, start, end)
+
+s.endswith('chan')
+True
+
+ex: Checking a filename extension.
+
+file = 'python.jpg'
+file.endswith('jpg')
+True
+
+
+
+3)islower():If string contains at least one case letter and all its cased letters are lowercase, It is return 'True'.
+
+Synatx: s.islower()
+
+ex: Checking the letter case of a username or text input.
+
+'Python'.islower()
+False
+'python'.islower()
+True
+
+
+
+4)isupper(): If string contains at least one case letter and all its cased letters are Uppercase, It is return 'True'.
+
+syntax: s.isupper()
+
+ex: Checking uppercase coupon codes or product labels.
+
+'Python'.isupper()
+False
+'PYTHON'.isupper()
+True
+
+
+
+5)is alpha():To check whether all character are alphabetic letters.
+Note:  The string is  not empty.
+
+Syntax: string.isalpha()
+
+ex:Checking whether a field contains only letters, such as a name field. Real names can contain spaces, hyphens, and apostrophes.
+
+
+
+
+6)is alnum(): Checks whether all characters are alphabetic letters or numeric digits, with no spaces or punctuation.
+
+Syntax: string.isalnum()
+
+ex: Checking a product code that allows only letters and numbers.
+
+
+
+
+7)istitle():To check whether strings follow the first letter should capital and other remaining is small letter in each words in the string.
+
+
+Syntax: string.istitle()
+
+EX: Checking or validating the formatting of product names and headings.
+
+
+8)isdentifier():Checks whether a string is a valid Python identifier — a name that can be used for a variable or function.
+
+Syntax: string.isidentifier()
+
+ex: Useful in code editors, developer tools, and applications that generate Python variable names. It is not a general-purpose username validator.
+
+
+9)isspace(): Checks whether every character in a non-empty string is whitespace, such as spaces, tabs, or newlines.
+
+Syntax: string.isspace()
+
+ex: Detecting input that contains only spaces instead of actual text
+
+10)isdecimal(): Checks whether every character is a decimal digit.
+
+Syntax: string.isdecimal()
+
+ex: checking whether an input contains decimal digits only, such as a numeric code
+
+11)isdigit():Checks whether all characters are digits according to Python's broader Unicode digit definition.
+
+
+syntax: string.isdigit()
+
+
+ex:Checking digit-like text in general text processing
+
+
+12)isnumeric():
+Checks whether all characters are numeric according to Unicode's numeric definition. This includes decimal digits and certain other numeric characters, such as fractions.
+
+
+Syntax: string.isnumeric()
+
+
+ex: Working with Unicode numeric text. For validating prices or quantities
+
+
+
+
+
+###############################################################################################
+
+
+splitting method & partition methods: 
+
+
+1)split():convert string to list.
+
+Syntax: string.split('',optional)
+
+
+s='a b c d'
+s
+'a b c d'
+
+
+s.split('')
+Traceback (most recent call last):
+  File "<pyshell#13>", line 1, in <module>
+    s.split('')
+ValueError: empty separator
+
+
+s.split(' ')
+['a', 'b', 'c', 'd']
+
+s.split('_')
+['a b c d']
+
+s.split('1')
+['a b c d']
+
+s.split('2')
+['a b c d']
+
+s.split(' ',2)
+['a', 'b', 'c d']
+
+s.split(' ',0)
+['a b c d']
+
+
+
+2)rsplit():convert right of string to list.
+
+Syntax: string.rsplit('',optional)
+
+
+
+3)splitlines():\n  it is split the lines for specific character (\n)
+
+syntax: string.splitlines()
+
+
+
+4)join():convert list to string
+
+Syntax: string.join()
+
+
+
+
+
+
+4)partition():partition() method splits a string into three parts at the first occurrence of a specified separator, returning a tuple containing the part before the separator.
+
+Syntax: string.partition('substring')
+
+
+
+
+
+5)rpartition():method splits a string into three parts at the right first occurrence of a specified separator, returning a tuple containing the part before the separator.
+
+Syntax: string.rpartition('substring')
+
+
+
+
+#####################################################################
+
+encode() & decode() methods: 
+
+1)encode(): convert text, emoji, special character into encode format.
+
+sytnax: string.encode()
+
+
+2)decode():again encode format to normal format(understandable).
+
+
+syntax: string.decode()
+
+
+'master ◀'.encode()
+b'master \xe2\x97\x80'
+b'master \xe2\x97\x80'.decode()
+'master ◀'
+
+
+###########################################################################################
+_____________________________________________________________________________________________
+List: it is collection all element and enclose with square brackets.
+	-> it is return sequence odered 
+	->it is allows duplicate value.
+	->it is a heterogenous.
+	->it is dynamical change size. 
+-----------------------------------------------------------------------------------------------------
+
+
+#l = [1,2,3,4,5]
+
+#l = [1,1,1,1]
+
+#l = [1,1.1,'str', True, [1,2,3], (2,31,2),{2,3,1},{1:2}]
+
+------------------------------------------------------------------------
+
+Operation : 
+
+
+1)concantion(+):
+
+a = [1,2,3]
+b = [2,3,4]
+a+b
+
+[1,2,3,2,3,4]
+
+
+2)indexing[]:
+
+a = "hello"
+
+a[1]
+
+-h
+
+
+3)slicing[start, end+1, step]:
+
+a = "hello world"
+
+a[0:5,1]
+-hello
+
+
+
+4)membership(in not in)
+
+a = "hello world"
+
+a in 'h'
+-true
+
+a not in 'z'
+-true
+
+
+a in 'z'
+-false
+
+
+5)repeation(*):
+
+a = "hello world"
+
+
+a*2
+
+-hello worldhello world
+
+
+-------------------------------------------------------------------------------------
+
+Basic inbuilt Functions:
+
+1)Length: len() it is give length of list.
+
+a =[1,2,3,4,5]
+
+len(a)
+
+-5
+
+
+2)max(): It is give max of element in the list.
+
+a = ['java', 'c', 'html', 'Python']
+
+max(a)
+-Python
+
+3)min(): it is give minimum of element in the list
+
+a = ['java', 'c', 'html', 'Python']
+
+min(a)
+-java
+
+
+
+
+4)modify: To modify the particular element in the list.
+
+a = ['java', 'c', 'html', 'Python']
+
+a[1]='c++'
+
+a
+-['java', 'c++', 'html', 'Python']
+
+
+
+
+5)append: To add one element end of list.
+
+ a = ['java', 'c', 'html', 'Python']
+
+a.append('cobal')
+
+a
+-['java', 'c', 'html', 'Python', 'cobal']
+
+
+
+
+
+
+6)extend:To add one or more element end of list.
+
+
+a = ['java', 'c', 'html', 'Python', 'cobal']
+
+a.extend(1,2,3)
+
+a 
+-['java', 'c', 'html', 'Python', 'cobal',1,2,3]
+
+
+
+
+
+7)insert: To add Specific position of the element in the list.
+
+a = ['java', 'c++', 'html', 'Python', 'cobal']
+
+a.insert(1,'c')
+a
+
+['java', 'c', 'c++', 'html', 'Python', 'cobal']
