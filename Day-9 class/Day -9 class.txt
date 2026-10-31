@@ -1,0 +1,471 @@
+Day -9 class(31.10.26)
+
+methods:
+
+1)sorted():
+s = {23,12,58,87,98}
+s
+{98, 87, 23, 58, 12}
+sorted(s)
+
+[12, 23, 58, 87, 98]
+
+b = {'b','c','k','a'}
+b
+{'b', 'a', 'k', 'c'}
+sorted(b)
+['a', 'b', 'c', 'k']
+
+
+
+
+2)any() & all(): 
+
+any(s)
+True
+all(s)
+True
+
+
+
+
+3)add():
+
+s.add(100)
+s
+{98, 100, 87, 23, 58, 12}
+
+
+
+4)update()
+s.update({10,56,58})
+s
+{98, 100, 10, 12, 23, 87, 56, 58}
+
+
+
+
+5)POP():
+
+s
+{98, 100, 10, 12, 23, 87, 56, 58}
+s.pop()
+98
+s.pop()
+100
+s.pop(12)
+Traceback (most recent call last):
+  File "<pyshell#18>", line 1, in <module>
+    s.pop(12)
+TypeError: set.pop() takes no arguments (1 given)
+s
+{10, 12, 23, 87, 56, 58}
+s.remove(12)
+s
+{10, 23, 87, 56, 58}
+
+
+
+6)discard():
+s
+{10, 23, 87, 56, 58}
+s.discard(56)
+s
+{10, 23, 87, 58}
+s.discard(52)
+s
+{10, 23, 87, 58}
+
+
+7)clear()
+
+s.clear
+<built-in method clear of set object at 0x000001959D95CBA0>
+s.clear()
+s
+set()
+
+
+
+8)copy():
+
+
+set()
+s = {23,12,58,87,98}
+s
+{98, 87, 23, 58, 12}
+k = s.copy()
+k
+{98, 87, 23, 58, 12}
+k.add(10)
+k
+{98, 10, 87, 23, 58, 12}
+s
+{98, 87, 23, 58, 12}
+
+
+########_______________________##############################_____________________________
+
+
+
+Dictionary: collection of data stored in key-value pairs.
+
+Key: Used to identify or access the data.
+
+Value: The actual information associated with the key.
+
+it is defined curly braces{}
+
+
+properties: 
+
+
+1)key-pairs: 
+----------------------------
+A dictionary stores information in key-value pairs.
+
+
+2)Mutable: 
+--------------------------------
+A dictionary is mutable, which means we can change, add, or remove elements after creating it.
+
+3)Keys must be unique: 
+----------------------------------------
+Not allowed duplicate Values.
+
+
+
+4)Values can be duplicated
+-----------------------------------------------------
+Dictionary values can contain duplicate data.
+we can give duplicate value, Not duplicate keys.
+
+
+
+a = {1:'jack', 2:'pop', 3:'jack',1:'jack'}
+  
+a
+  
+{1: 'jack', 2: 'pop', 3: 'jack'}   //values are allowed duplicate and Values are allowed duplicate.
+
+
+
+5)key are allowed only string, interger, complex, Tuples.
+------------------------------------------------------------
+Dictionary keys must be hashable, such as strings, integers, and tuples containing only hashable elements.
+
+But lists and sets cannot be dictionary keys.
+
+a = {}
+a[1]=1
+a
+{1: 1}
+a[2.2='float']
+SyntaxError: cannot assign to literal here. Maybe you meant '==' instead of '='?
+a[2.2]='float'
+a[3+2j]='complex'
+a[(1,2,5)='tuple'
+  
+SyntaxError: invalid syntax
+a[(1,2,5)]='tuple'
+  
+a
+  
+{1: 1, 2.2: 'float', (3+2j): 'complex', (1, 2, 5): 'tuple'}
+a[True]='boolean'
+  
+a[{1,2,3}]='set'
+  
+Traceback (most recent call last):
+  File "<pyshell#53>", line 1, in <module>
+    a[{1,2,3}]='set'
+TypeError: unhashable type: 'set'
+a[[1,2,4]]='list'
+  
+Traceback (most recent call last):
+  File "<pyshell#54>", line 1, in <module>
+    a[[1,2,4]]='list'
+TypeError: unhashable type: 'list'
+a[{1:2}]='dict'
+  
+Traceback (most recent call last):
+  File "<pyshell#55>", line 1, in <module>
+    a[{1:2}]='dict'
+TypeError: unhashable type: 'dict'
+
+
+
+operation:
+
+
+1)access & Handling error(get):  
+-------------------------------------------------
+
+a = {1:'jack', 2:'pop', 3:'jack'}
+  
+a
+  
+{1: 'jack', 2: 'pop', 3: 'jack'}
+a[2]
+  
+'pop'
+a[1]
+  
+'jack'
+
+a[3]
+  
+'jack'
+a[4]
+  
+Traceback (most recent call last):
+  File "<pyshell#64>", line 1, in <module>
+    a[4]
+KeyError: 4  
+
+// whenever key not found in the dict 'it is through a error'. To handle this we use 'get'.
+
+a.get(5) // not showing any error.
+  
+a.get(1)// if it is there showing value.
+  
+'jack'
+a.get(4,'not Found') // we create a own error if not found the key in the Dict.
+  
+'not Found'
+
+
+
+2)membership operation: Check whether key exists
+---------------------------------
+a
+  
+{1: 'jack', 2: 'pop', 3: 'jack'}
+
+
+1 in a
+  
+True
+5 in a
+  
+False
+5 not in a
+  
+True
+
+
+3) add & modification:  
+---------------------------------------------
+
+add: Add new pair
+dict[key] = value
+
+
+modify: change value.
+dict[key] = change value.
+
+//add:
+a
+  
+{1: 'jack', 2: 'pop', 3: 'jack'}
+a[4]='hello'
+  
+a
+  
+{1: 'jack', 2: 'pop', 3: 'jack', 4: 'hello'}
+
+
+
+//modification:
+a[1]='master'
+  
+a
+  
+{1: 'master', 2: 'pop', 3: 'jack', 4: 'hello'}
+
+
+
+4)update: 
+--------------------------------------
+
+
+a.update({25:12,112:'rajju'})
+  
+a
+  
+{1: 'master', 2: 'pop', 3: 'jack', 4: 'hello', 25: 12, 112: 'rajju'}
+
+
+
+
+5)pop item():
+--------------------------------------
+Remove last inserted pair
+
+  
+{1: 'master', 2: 'pop', 3: 'jack', 4: 'hello', 25: 12, 112: 'rajju'}
+a.popitem()
+  
+(112, 'rajju')
+a.popitem('pop')
+  
+Traceback (most recent call last):
+  File "<pyshell#84>", line 1, in <module>
+    a.popitem('pop')
+TypeError: dict.popitem() takes no arguments (1 given)
+
+
+
+6)pop():
+-----------------------------------------------------
+Remove a specific key
+
+a.pop()
+  
+Traceback (most recent call last):
+  File "<pyshell#85>", line 1, in <module>
+    a.pop()
+TypeError: pop expected at least 1 argument, got 0
+a.pop(2)
+  
+'pop'
+
+
+7)del():
+-------------------------------------------------------
+Delete a key
+
+del a[1]
+  
+a
+  
+{3: 'jack', 4: 'hello', 25: 12}
+
+
+8)clear():entire dict remove all key-pairs.
+
+a.clear()
+  
+a
+  
+{}
+
+
+
+//methods: 
+
+
+// ________===============================____________===++++++++++++++++++++++++
+a
+  
+{}
+a = {1:'jack', 2:'pop', 3:'jack'}
+  
+a
+  
+{1: 'jack', 2: 'pop', 3: 'jack'}
+
+
+
+1)Keys():
+---------------------------------------------
+a.keys()
+  
+dict_keys([1, 2, 3])
+
+
+
+
+2.values():
+------------------------------------------------
+a.values()
+  
+dict_values(['jack', 'pop', 'jack'])
+
+
+
+3.items():
+------------------------------------------------------
+a.items()
+  
+dict_items([(1, 'jack'), (2, 'pop'), (3, 'jack')])
+
+
+
+4.length():
+-------------------------------------------------
+len(a)
+  
+3
+
+
+5.sorted():
+------------------------------------------------
+sorted(a)
+  
+[1, 2, 3]
+
+
+6.max():
+------------------------------------------------------
+max(a)
+  
+3
+
+7.min():
+---------------------------------------------
+min(a)
+  
+1
+
+8.copy():
+------------------------------------------------------
+b = a.copy()
+  
+b
+  
+{1: 'jack', 2: 'pop', 3: 'jack'}
+a
+  
+{1: 'jack', 2: 'pop', 3: 'jack'}
+
+
+
+9.fromkeys():
+
+a.fromkeys()
+  
+Traceback (most recent call last):
+  File "<pyshell#105>", line 1, in <module>
+    a.fromkeys()
+TypeError: fromkeys expected at least 1 argument, got 0
+b = dict.fromkeys(["a",'b','c','d'])
+  
+b
+  
+{'a': None, 'b': None, 'c': None, 'd': None}
+b = dict.fromkeys(["a",'b','c','d'],1)
+  
+b
+  
+{'a': 1, 'b': 1, 'c': 1, 'd': 1}
+
+
+10.setdefaults:
+
+b.setdefault('k',1)
+  
+1
+
+  
+{'a': 1, 'b': 1, 'c': 1, 'd': 1, 'k': 1}
+
+11.frozenset():
+
+A frozenset is immutable (we cannot add or remove elements after creation).
+
+
+// ________===============================____________===++++++++++++++++++++++++
+
+
+
