@@ -1,0 +1,144 @@
+Day -10 Class(2.11.2026)
+
+
+1. What does a control statement mean?
+----------------------------------------------
+A control statement is a statement that controls the order of execution of a program.
+A control statement tells Python which code to execute and when to execute it.
+
+For example, imagine you are buying a product from an online shopping application.
+- If the product is available, allow the customer to buy it.
+- If the product is not available, display "Out of Stock".
+Python uses control statements to make these decisions.
+
+
+Normally, Python executes code one line after another, from top to bottom. ---->
+This is called normal execution because Python follows the same order as the code.
+
+
+
+Noted: Sometimes we don't want Python to execute every line in the same order.
+
+we need this work this above statement : 
+1.Make decisions:
+----------------------
+Python checks the condition and chooses what to execute
+ex:
+stock = 10
+
+if stock > 0:
+    print("Product available")
+else:
+    print("Out of stock")
+
+2.Repeat tasks
+--------------------------------
+Python repeats the same statement three times.
+ex:
+for i in range(1, 4):
+    print("Welcome to FeatherMart")
+
+3.Change the execution flow
+---------------------------------------
+When i becomes 3, Python stops the loop instead of continuing.
+
+ex:
+for i in range(1, 6):
+    if i == 3:
+        break
+    print(i)
+
+_________________________Normal Execution vs control statements________________
+
+Normal execution	                        Control statements
+-------------------                     ----------------------------------
+Runs line by line	                        Makes decisions
+Follows the written order	                Repeats tasks
+Executes statements in sequence	            Can change the execution flow
+
+Control statements help Python make decisions, repeat tasks, 
+and control which code runs in a program.
+
+//______________________________________*___________________________________________
+
+
+1) conditional Statement: 
+A conditional statement is used to make decisions in a Python program based on a condition.
+
+For example, in an online shopping application:
+- If the order amount is ₹1,000 or more, give free delivery.
+- Otherwise, do not give free delivery.
+Python makes this decision using conditional statements.
+
+
+There are four type of conditional statements:
+
+
+1.simple if :
+------------------
+Executes code only when the condition is True. 
+it is return a one response otherwise nothing written.
+
+
+stock = 10
+
+if stock > 0:
+    print("Product available")
+
+
+
+
+2.if-else:
+----------------------
+exceutes code one condition when true, 
+if it false go to another block inside statement return.Two response.
+
+balance = 5000
+price = 3000
+
+if balance >= price:
+    print("Purchase successful")
+else:
+    print("Insufficient balance")
+
+
+3.if-elif-else:
+---------------------
+Checks multiple conditions and executes the first condition that is True. 
+if it false go to another condition and that is also false go to another condition utill 
+check all condition otherwise it return else statement.
+
+amount = 6000
+
+if amount >= 10000:
+    print("20% discount")
+elif amount >= 5000:
+    print("10% discount")
+elif amount >= 2000:
+    print("5% discount")
+else:
+    print("No discount")
+
+
+4.Nested if:
+An if statement written inside another if statement.
+
+logged_in = True
+stock = 5
+
+if logged_in:
+    if stock > 0:
+        print("You can purchase the product")
+
+___________________________________________________________
+----------------------------------------------------------
+Statement	                    Purpose
+Simple if------------------>    Check one condition
+if-else	Choose ------------>    between two options
+elif ladder---------------->	Check multiple conditions
+Nested if------------------>	Check dependent conditions
+------------------------------------------------------------
+
+
+
+//_______________________________________________________________________________________
