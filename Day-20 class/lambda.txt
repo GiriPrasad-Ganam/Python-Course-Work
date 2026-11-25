@@ -1,0 +1,32 @@
+A lambda function:anonymous function in Python that you can create without 
+using the 'def' keyword.
+
+note:It is used when you need a short function for a simple operation.
+
+syntax:
+
+function Name = lambda parameter : operation(statements)
+
+
+
+normal vs lambda :
+-------------------------
+
+Normal Function:
+
+def add(a, b):
+    return a + b
+
+print(add(10, 20))
+
+
+Lambda function:
+
+add = lambda a, b: a + b
+
+print(add(10, 20))
+
+
+
+
+
