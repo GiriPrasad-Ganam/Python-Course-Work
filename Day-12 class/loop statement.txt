@@ -1,0 +1,151 @@
+what is loop statement?
+------------------------------------
+A loop statement is used to execute the same block of code repeatedly 
+until a condition is not satisfied or the loop finishes.
+
+
+ex: Imagine an online shopping application displaying 5 products.
+
+Instead of writing print() five times, we can use a loop to display all products.
+
+
+Type of Loop Statements:
+
+1) for Loop
+
+2)while loop
+
+
+1)for Loop:
+======================================
+A for loop is used to repeat a block of code for each item in a sequence, 
+such as a list, string, or range.
+
+
+ex: Online shopping application
+
+Suppose a shopping application needs to display all available products.
+
+products = ["Laptop", "Mobile", "Mouse", "Keyboard"]
+
+for product in products:
+    print(product)
+
+
+----------------------------------
+Jump statements:
+
+----------------------------------------
+
+These three are called loop control statements or jump statements. 
+They help us control how a loop executes.   
+
+In simple words:
+- break – Stops the loop.
+- continue – Skips the current iteration and moves to the next iteration.
+- pass – Does nothing; it acts as a placeholder.
+
+
+//_________________DAY - 13 Class_______________________________________________
+
+
+
+what is enumerate() ?
+--------------------------------------
+enumerate() is a built-in Python function that gives us two things while looping through a collection:
+1. Index (position number).
+2. Value (item).
+
+
+Note:
+enumerate() helps us get the position and value of each item at the same time.
+
+ex: Online shopping application
+Imagine your shopping app has a list of products.
+
+products = ["Laptop", "Mobile", "Mouse", "Keyboard"]
+
+for index, product in enumerate(products):
+    print(index, product)
+
+//Output:
+
+0 Laptop
+1 Mobile
+2 Mouse
+3 Keyboard
+
+
+index represents the position.
+
+product represents the product name.
+
+enumerate(products) gives both together.
+
+
+=================================================================================
+
+
+what is a while Loop ?
+--------------------------------------
+
+A while loop repeatedly executes a block of code as long as the given condition is True.
+
+Synatx:
+
+while condition:
+    # statements
+    #Update
+
+
+ex: 
+number = 1
+
+while number <= 5:
+    print(number)
+    number += 1
+
+
+//Output:
+
+1
+2
+3
+4
+5
+
+
+ex:Food delivery order tracking
+Imagine an application checking whether an order is delivered.
+
+order_status = "Preparing"
+
+while order_status != "Delivered":
+    print("Your order is:", order_status)
+
+    order_status = input("Update order status: ")
+
+print("Your order has been delivered!")
+
+
+
+
+
+--------------------------------------------------
+//Day -15 class 
+--------------------------------------------------
+
+
+Nested Loop:
+-------------------------------------------
+
+A nested loop is a loop inside another loop.
+Python supports nested for loops and nested while loops.
+
+ex:A cinema has 3 rows, and each row contains 4 seats. 
+We need to display all seat numbers.
+
+Patterns: 
+
+'''
+'''
