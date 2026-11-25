@@ -1,0 +1,183 @@
+Inbuilt module : 
+-----------------------------
+
+1)sys module: 
+The sys module is a built-in Python module that provides access 
+to Python interpreter information 
+and some system-related functionality.
+
+note:
+-----
+We use sys when we want our Python program to interact with 
+the Python interpreter or get information about how the program is running.
+
+
+
+Function / Attribute	        Purpose
+-------------------------------------------------------------------------
+sys.version	 ->                   Check Python version
+sys.platform ->	                Identify operating system
+sys.argv	 ->                   Get command-line arguments
+sys.exit()	 ->                   Stop program execution
+sys.path	                    Find module search locations
+sys.getsizeof()	                Check object memory size
+sys.stdin	                    Read standard input
+sys.stdout	                    Write standard output
+sys.maxsize	                    Get the maximum platform-sized integer value
+
+
+
+
+
+2)platform module:
+------------------------
+The platform module is a standard-library module used 
+to get information about your computer's operating system, 
+processor, Python implementation, and system architecture.
+
+In simple words:
+
+The platform module tells us information about 
+the computer on which our Python program is running.
+
+
+import platform
+
+print("Operating System:", platform.system())
+print("OS Release:", platform.release())
+print("Processor:", platform.processor())
+print("Machine:", platform.machine())
+print("Python Version:", platform.python_version())
+
+
+Function	                        Purpose
+--------------------------------------------------------------------
+platform.system()	                Operating system
+platform.release()	                OS release
+platform.version()	                OS version details
+platform.processor()	            Processor information
+platform.machine()	                Machine architecture
+platform.python_version()	        Python version
+platform.architecture()	            Python executable architecture
+
+
+
+
+
+
+3)math module:
+--------------------------------
+The math module provides mathematical functions and constants.
+
+In simple words:
+
+We use the math module when we need advanced mathematical calculations in Python.
+
+
+Math module
+
+Function	            Purpose
+------------------------------------------
+math.sqrt()	            Square root
+math.factorial()	    Factorial
+math.ceil()	            Round up
+math.floor()	        Round down
+math.pow()	            Power
+math.gcd()	            HCF
+math.lcm()	            LCM
+math.fabs()	            Absolute value
+math.sin()	            Sine
+math.cos()	            Cosine
+math.tan()	            Tangent
+math.pi	                PI constant
+math.e	                Euler's number
+
+
+
+
+3)random 
+---------------------------------
+The random module is a built-in Python module used to generate random numbers, 
+select random items, and shuffle collections.
+
+In simple words:
+
+Whenever you want Python to choose something randomly without following a fixed order, 
+you can use the random module.
+
+
+Function	What it does
+--------------------------------
+randint()	Random integer, including endpoints
+randrange()	Random integer from a range, excluding stop
+random()	Random decimal between 0 and 1
+uniform()	Random decimal within a range
+choice()	Selects one random item
+choices()	Selects multiple items, with repetition allowed
+sample()	Selects multiple unique items
+shuffle()	Rearranges a list
+seed()	    Reproduces a pseudo-random sequence
+
+
+
+4)collections:
+---------------------------------
+The collections module is a built-in Python module 
+that provides specialized data structures to store and manage data efficiently.
+
+You already know these Python data types:
+- List
+- Tuple
+- Set
+- Dictionary
+
+methods:
+
+Method	        Purpose
+------------------------------
+append()	    Add at the right
+appendleft()	Add at the left
+pop()	        Remove from the right
+popleft()	    Remove from the left
+rotate()	    Rotate elements
+
+
+Data structure	        Main purpose	            Example application
+-------------------------------------------------------------------------------
+Counter	                Count occurrences	        Product sales
+defaultdict	            Automatic default values	Student grouping
+deque	                Add/remove at both ends	    Customer queue
+namedtuple	            Named tuple fields	        Employee records
+ChainMap	            Combine dictionaries	    Application settings
+
+
+
+
+5)itertools:
+--------------------------
+
+Imagine you are developing a shopping application. You need to:
+- Generate different product combinations.
+- Find all possible arrangements of products.
+- Repeat a set of values.
+- Combine multiple lists.
+- Create groups from data.
+Instead of writing lengthy loops, itertools provides ready-made functions
+
+Function	            Purpose
+-----------------------------------------------
+count()	                Generates continuous numbers
+cycle()	                Repeats elements
+repeat()	            Repeats one value
+product()	            Generates Cartesian products
+permutations()	        Arrangements; order matters
+combinations()	        Groups; order doesn't matter
+chain()	                Combines iterables
+islice()	            Extracts part of an iterator
+groupby()	            Groups consecutive matching elements
+
+
+
+
+
+
