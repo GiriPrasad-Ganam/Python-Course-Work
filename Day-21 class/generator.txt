@@ -1,0 +1,38 @@
+A Generator in Python is a special type of function 
+that produces values one at a time 
+instead of returning all values at once.
+
+Generators use the yield keyword instead of return.
+
+
+Normal function using return:
+-------------------------------------
+def numbers():
+    return [1, 2, 3, 4, 5]
+
+result = numbers()
+print(result)
+
+
+output: [1, 2, 3, 4, 5]
+
+Generator function using yield:
+---------------------------------------
+
+def numbers():
+    yield 1
+    yield 2
+    yield 3
+    yield 4
+    yield 5
+
+for num in numbers():
+    print(num)
+
+
+ouput:
+1
+2
+3
+4
+5
