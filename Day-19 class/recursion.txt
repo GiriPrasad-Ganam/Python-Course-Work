@@ -1,0 +1,5 @@
+Recursion is function call itself untill base condition satifies/ Become 'True'
+
+
+
+
