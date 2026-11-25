@@ -1,0 +1,40 @@
+What is Function ?
+-----------------------------------
+Function is block of reuseable code that perform specific Task.
+
+simple word,
+Instead of writing the same code again and again, 
+we can write it once inside a function and 
+call it whenever we need it.
+
+syntax:
+def function_name():
+    Statements
+
+
+ex: when I want check my balance amount in my googlepay.
+
+
+why use function ?
+-----------------------------------------
+there are several reasons to use functions:
+
+1. Code reusability: Write code once and use it multiple times.
+2. Reduce code duplication: Avoid writing the same code repeatedly.
+3. Easy debugging: Find and fix errors more easily.
+4. Code readability: Make programs easier to understand.
+5. Code organization: Divide a large program into smaller tasks.
+6. Easy maintenance: Update one function instead of 
+                     changing the same code in multiple places.
+
+
+
+
+
+1)inbult function: Already provided by Python
+Examples: print(), input(), len(), sum(), max()
+
+
+2)User-defined function:
+These are functions that we create based on our requirements.
+example: greeting(), calculate_salary(), check_even()
