@@ -1,0 +1,16 @@
+
+what is module ? 
+---------------------------
+A module in Python is a file that contains Python code, 
+such as (functions, variables, and classes),
+which we can reuse in other Python programs.
+
+USER DEFINED MODULE :
+----------------------------
+Different way to import the files: 
+
+'*' - import entire files. ex: from file name import *
+'define function name' - specific function and variable.
+                        ex: from logic import cal, sum -  sum, cal are function name
+
+
