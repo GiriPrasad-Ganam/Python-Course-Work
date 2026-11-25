@@ -1,0 +1,56 @@
+Pass by Value and Pass by Reference describe how arguments are passed to a 
+
+
+1. Pass by Value
+------------------------------
+Meaning: A function receives a copy of a value. 
+Changes made to that copy do not change the original variable.
+
+def update(x):
+    x = 100
+    print("Inside function:", x)
+
+a = 50
+update(a)
+
+print("Outside function:", a)
+
+output:
+#################
+Inside function: 100
+Outside function: 50
+
+
+2. Pass by Reference
+-----------------------------
+Meaning: A function receives access to the same object that the original variable refers to. 
+Changes to a mutable object can be visible outside the function.
+
+
+def update(numbers):
+    numbers.append(40)
+    print("Inside function:", numbers)
+
+my_list = [10, 20, 30]
+
+update(my_list)
+
+print("Outside function:", my_list)
+
+
+output:
+
+Inside function: [10, 20, 30, 40]
+Outside function: [10, 20, 30, 40]
+
+
+
+
+
+
+
+
+
+
+
+
